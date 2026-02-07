@@ -1,0 +1,37 @@
+model BodyMeasurements {
+  id String @id @default(cuid())
+
+  height     Int?
+  weight     Int?
+  weightGoal Int? @map("weight_goal")
+
+  chest Int?
+  waist Int?
+  thing Int?
+  arm   Int?
+
+  activityLevel ActivityLevel? @map("activity_level")
+  nutritionGoal NutritionGoal? @map("nutrition_goal")
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @unique @map("user_id")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("body_measurements")
+}
+
+enum ActivityLevel {
+  SEDENTARY
+  LIGHT
+  MODERATE
+  ACTIVE
+  VERY_ACTIVE
+}
+
+enum NutritionGoal {
+  WEIGHT_LOSS
+  MAINTENANCE
+  MUSCLE_GAIN
+}

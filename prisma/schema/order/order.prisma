@@ -1,0 +1,21 @@
+model Order {
+  id String @id @default(cuid())
+
+  orderId String      @unique @map("order_id")
+  status  OrderStatus @default(PENDING)
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @map("user_id")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("orders")
+}
+
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  CANCELLED
+}

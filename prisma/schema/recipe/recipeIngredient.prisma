@@ -1,0 +1,21 @@
+model RecipeIngredient {
+  id String @id @default(cuid())
+
+  name     String
+  iconUrl  String  @map("icon_url")
+  content  String
+  quantity Decimal
+  unit     Unit
+
+  recipe   Recipe @relation(fields: [recipeId], references: [id])
+  recipeId String @map("recipe_id")
+
+  ingredient   Ingredient @relation(fields: [ingredientId], references: [id])
+  ingredientId String     @map("ingredient_id")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([recipeId, ingredientId])
+  @@map("recipe_ingredients")
+}

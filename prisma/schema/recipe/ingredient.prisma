@@ -1,0 +1,14 @@
+model Ingredient {
+  id String @id @default(cuid())
+
+  name  String
+  unit  Unit
+  price Decimal
+
+  recipes RecipeIngredient[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("ingredients")
+}

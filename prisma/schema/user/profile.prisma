@@ -1,0 +1,21 @@
+model Profile {
+  id String @id @default(cuid())
+
+  fullName String  @map("full_name")
+  gender   Gender?
+  age      Int?
+  bio      String?
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @unique @map("user_id")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("profiles")
+}
+
+enum Gender {
+  MALE
+  FEMALE
+}

@@ -1,0 +1,8 @@
+enum Unit {
+  GRAM
+  MILLILITER
+  PIECE
+  TEASPOON
+  TABLESPOON
+  CLOVERS
+}
