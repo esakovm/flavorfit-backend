@@ -16,7 +16,7 @@ import { isDevMode } from 'src/utils/is-dev.util';
 @Injectable()
 export class AuthService {
   constructor(
-    private prismaService: PrismaService,
+    private prisma: PrismaService,
     private configService: ConfigService,
     private jwtService: JwtService,
     private usersService: UsersService,
@@ -34,7 +34,7 @@ export class AuthService {
       }
 
       /* TODO: Move to user service */
-      const user = await this.prismaService.user.create({
+      const user = await this.prisma.user.create({
         data: {
           email,
           password: await hash(input.password),
