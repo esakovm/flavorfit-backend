@@ -7,7 +7,7 @@ model BodyMeasurements {
 
   chest Int?
   waist Int?
-  thing Int?
+  thigh Int?
   arm   Int?
 
   activityLevel ActivityLevel? @map("activity_level")

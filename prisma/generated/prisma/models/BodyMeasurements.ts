@@ -32,7 +32,7 @@ export type BodyMeasurementsAvgAggregateOutputType = {
   weightGoal: number | null
   chest: number | null
   waist: number | null
-  thing: number | null
+  thigh: number | null
   arm: number | null
 }
 
@@ -42,7 +42,7 @@ export type BodyMeasurementsSumAggregateOutputType = {
   weightGoal: number | null
   chest: number | null
   waist: number | null
-  thing: number | null
+  thigh: number | null
   arm: number | null
 }
 
@@ -53,7 +53,7 @@ export type BodyMeasurementsMinAggregateOutputType = {
   weightGoal: number | null
   chest: number | null
   waist: number | null
-  thing: number | null
+  thigh: number | null
   arm: number | null
   activityLevel: $Enums.ActivityLevel | null
   nutritionGoal: $Enums.NutritionGoal | null
@@ -69,7 +69,7 @@ export type BodyMeasurementsMaxAggregateOutputType = {
   weightGoal: number | null
   chest: number | null
   waist: number | null
-  thing: number | null
+  thigh: number | null
   arm: number | null
   activityLevel: $Enums.ActivityLevel | null
   nutritionGoal: $Enums.NutritionGoal | null
@@ -85,7 +85,7 @@ export type BodyMeasurementsCountAggregateOutputType = {
   weightGoal: number
   chest: number
   waist: number
-  thing: number
+  thigh: number
   arm: number
   activityLevel: number
   nutritionGoal: number
@@ -102,7 +102,7 @@ export type BodyMeasurementsAvgAggregateInputType = {
   weightGoal?: true
   chest?: true
   waist?: true
-  thing?: true
+  thigh?: true
   arm?: true
 }
 
@@ -112,7 +112,7 @@ export type BodyMeasurementsSumAggregateInputType = {
   weightGoal?: true
   chest?: true
   waist?: true
-  thing?: true
+  thigh?: true
   arm?: true
 }
 
@@ -123,7 +123,7 @@ export type BodyMeasurementsMinAggregateInputType = {
   weightGoal?: true
   chest?: true
   waist?: true
-  thing?: true
+  thigh?: true
   arm?: true
   activityLevel?: true
   nutritionGoal?: true
@@ -139,7 +139,7 @@ export type BodyMeasurementsMaxAggregateInputType = {
   weightGoal?: true
   chest?: true
   waist?: true
-  thing?: true
+  thigh?: true
   arm?: true
   activityLevel?: true
   nutritionGoal?: true
@@ -155,7 +155,7 @@ export type BodyMeasurementsCountAggregateInputType = {
   weightGoal?: true
   chest?: true
   waist?: true
-  thing?: true
+  thigh?: true
   arm?: true
   activityLevel?: true
   nutritionGoal?: true
@@ -258,7 +258,7 @@ export type BodyMeasurementsGroupByOutputType = {
   weightGoal: number | null
   chest: number | null
   waist: number | null
-  thing: number | null
+  thigh: number | null
   arm: number | null
   activityLevel: $Enums.ActivityLevel | null
   nutritionGoal: $Enums.NutritionGoal | null
@@ -297,7 +297,7 @@ export type BodyMeasurementsWhereInput = {
   weightGoal?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
   chest?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
   waist?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
-  thing?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
+  thigh?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
   arm?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
   activityLevel?: Prisma.EnumActivityLevelNullableFilter<"BodyMeasurements"> | $Enums.ActivityLevel | null
   nutritionGoal?: Prisma.EnumNutritionGoalNullableFilter<"BodyMeasurements"> | $Enums.NutritionGoal | null
@@ -314,7 +314,7 @@ export type BodyMeasurementsOrderByWithRelationInput = {
   weightGoal?: Prisma.SortOrderInput | Prisma.SortOrder
   chest?: Prisma.SortOrderInput | Prisma.SortOrder
   waist?: Prisma.SortOrderInput | Prisma.SortOrder
-  thing?: Prisma.SortOrderInput | Prisma.SortOrder
+  thigh?: Prisma.SortOrderInput | Prisma.SortOrder
   arm?: Prisma.SortOrderInput | Prisma.SortOrder
   activityLevel?: Prisma.SortOrderInput | Prisma.SortOrder
   nutritionGoal?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -335,7 +335,7 @@ export type BodyMeasurementsWhereUniqueInput = Prisma.AtLeast<{
   weightGoal?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
   chest?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
   waist?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
-  thing?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
+  thigh?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
   arm?: Prisma.IntNullableFilter<"BodyMeasurements"> | number | null
   activityLevel?: Prisma.EnumActivityLevelNullableFilter<"BodyMeasurements"> | $Enums.ActivityLevel | null
   nutritionGoal?: Prisma.EnumNutritionGoalNullableFilter<"BodyMeasurements"> | $Enums.NutritionGoal | null
@@ -351,7 +351,7 @@ export type BodyMeasurementsOrderByWithAggregationInput = {
   weightGoal?: Prisma.SortOrderInput | Prisma.SortOrder
   chest?: Prisma.SortOrderInput | Prisma.SortOrder
   waist?: Prisma.SortOrderInput | Prisma.SortOrder
-  thing?: Prisma.SortOrderInput | Prisma.SortOrder
+  thigh?: Prisma.SortOrderInput | Prisma.SortOrder
   arm?: Prisma.SortOrderInput | Prisma.SortOrder
   activityLevel?: Prisma.SortOrderInput | Prisma.SortOrder
   nutritionGoal?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -375,7 +375,7 @@ export type BodyMeasurementsScalarWhereWithAggregatesInput = {
   weightGoal?: Prisma.IntNullableWithAggregatesFilter<"BodyMeasurements"> | number | null
   chest?: Prisma.IntNullableWithAggregatesFilter<"BodyMeasurements"> | number | null
   waist?: Prisma.IntNullableWithAggregatesFilter<"BodyMeasurements"> | number | null
-  thing?: Prisma.IntNullableWithAggregatesFilter<"BodyMeasurements"> | number | null
+  thigh?: Prisma.IntNullableWithAggregatesFilter<"BodyMeasurements"> | number | null
   arm?: Prisma.IntNullableWithAggregatesFilter<"BodyMeasurements"> | number | null
   activityLevel?: Prisma.EnumActivityLevelNullableWithAggregatesFilter<"BodyMeasurements"> | $Enums.ActivityLevel | null
   nutritionGoal?: Prisma.EnumNutritionGoalNullableWithAggregatesFilter<"BodyMeasurements"> | $Enums.NutritionGoal | null
@@ -391,7 +391,7 @@ export type BodyMeasurementsCreateInput = {
   weightGoal?: number | null
   chest?: number | null
   waist?: number | null
-  thing?: number | null
+  thigh?: number | null
   arm?: number | null
   activityLevel?: $Enums.ActivityLevel | null
   nutritionGoal?: $Enums.NutritionGoal | null
@@ -407,7 +407,7 @@ export type BodyMeasurementsUncheckedCreateInput = {
   weightGoal?: number | null
   chest?: number | null
   waist?: number | null
-  thing?: number | null
+  thigh?: number | null
   arm?: number | null
   activityLevel?: $Enums.ActivityLevel | null
   nutritionGoal?: $Enums.NutritionGoal | null
@@ -423,7 +423,7 @@ export type BodyMeasurementsUpdateInput = {
   weightGoal?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   chest?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   waist?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  thing?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  thigh?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   arm?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   activityLevel?: Prisma.NullableEnumActivityLevelFieldUpdateOperationsInput | $Enums.ActivityLevel | null
   nutritionGoal?: Prisma.NullableEnumNutritionGoalFieldUpdateOperationsInput | $Enums.NutritionGoal | null
@@ -439,7 +439,7 @@ export type BodyMeasurementsUncheckedUpdateInput = {
   weightGoal?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   chest?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   waist?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  thing?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  thigh?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   arm?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   activityLevel?: Prisma.NullableEnumActivityLevelFieldUpdateOperationsInput | $Enums.ActivityLevel | null
   nutritionGoal?: Prisma.NullableEnumNutritionGoalFieldUpdateOperationsInput | $Enums.NutritionGoal | null
@@ -455,7 +455,7 @@ export type BodyMeasurementsCreateManyInput = {
   weightGoal?: number | null
   chest?: number | null
   waist?: number | null
-  thing?: number | null
+  thigh?: number | null
   arm?: number | null
   activityLevel?: $Enums.ActivityLevel | null
   nutritionGoal?: $Enums.NutritionGoal | null
@@ -471,7 +471,7 @@ export type BodyMeasurementsUpdateManyMutationInput = {
   weightGoal?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   chest?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   waist?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  thing?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  thigh?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   arm?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   activityLevel?: Prisma.NullableEnumActivityLevelFieldUpdateOperationsInput | $Enums.ActivityLevel | null
   nutritionGoal?: Prisma.NullableEnumNutritionGoalFieldUpdateOperationsInput | $Enums.NutritionGoal | null
@@ -486,7 +486,7 @@ export type BodyMeasurementsUncheckedUpdateManyInput = {
   weightGoal?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   chest?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   waist?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  thing?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  thigh?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   arm?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   activityLevel?: Prisma.NullableEnumActivityLevelFieldUpdateOperationsInput | $Enums.ActivityLevel | null
   nutritionGoal?: Prisma.NullableEnumNutritionGoalFieldUpdateOperationsInput | $Enums.NutritionGoal | null
@@ -502,7 +502,7 @@ export type BodyMeasurementsCountOrderByAggregateInput = {
   weightGoal?: Prisma.SortOrder
   chest?: Prisma.SortOrder
   waist?: Prisma.SortOrder
-  thing?: Prisma.SortOrder
+  thigh?: Prisma.SortOrder
   arm?: Prisma.SortOrder
   activityLevel?: Prisma.SortOrder
   nutritionGoal?: Prisma.SortOrder
@@ -517,7 +517,7 @@ export type BodyMeasurementsAvgOrderByAggregateInput = {
   weightGoal?: Prisma.SortOrder
   chest?: Prisma.SortOrder
   waist?: Prisma.SortOrder
-  thing?: Prisma.SortOrder
+  thigh?: Prisma.SortOrder
   arm?: Prisma.SortOrder
 }
 
@@ -528,7 +528,7 @@ export type BodyMeasurementsMaxOrderByAggregateInput = {
   weightGoal?: Prisma.SortOrder
   chest?: Prisma.SortOrder
   waist?: Prisma.SortOrder
-  thing?: Prisma.SortOrder
+  thigh?: Prisma.SortOrder
   arm?: Prisma.SortOrder
   activityLevel?: Prisma.SortOrder
   nutritionGoal?: Prisma.SortOrder
@@ -544,7 +544,7 @@ export type BodyMeasurementsMinOrderByAggregateInput = {
   weightGoal?: Prisma.SortOrder
   chest?: Prisma.SortOrder
   waist?: Prisma.SortOrder
-  thing?: Prisma.SortOrder
+  thigh?: Prisma.SortOrder
   arm?: Prisma.SortOrder
   activityLevel?: Prisma.SortOrder
   nutritionGoal?: Prisma.SortOrder
@@ -559,7 +559,7 @@ export type BodyMeasurementsSumOrderByAggregateInput = {
   weightGoal?: Prisma.SortOrder
   chest?: Prisma.SortOrder
   waist?: Prisma.SortOrder
-  thing?: Prisma.SortOrder
+  thigh?: Prisma.SortOrder
   arm?: Prisma.SortOrder
 }
 
@@ -615,7 +615,7 @@ export type BodyMeasurementsCreateWithoutUserInput = {
   weightGoal?: number | null
   chest?: number | null
   waist?: number | null
-  thing?: number | null
+  thigh?: number | null
   arm?: number | null
   activityLevel?: $Enums.ActivityLevel | null
   nutritionGoal?: $Enums.NutritionGoal | null
@@ -630,7 +630,7 @@ export type BodyMeasurementsUncheckedCreateWithoutUserInput = {
   weightGoal?: number | null
   chest?: number | null
   waist?: number | null
-  thing?: number | null
+  thigh?: number | null
   arm?: number | null
   activityLevel?: $Enums.ActivityLevel | null
   nutritionGoal?: $Enums.NutritionGoal | null
@@ -661,7 +661,7 @@ export type BodyMeasurementsUpdateWithoutUserInput = {
   weightGoal?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   chest?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   waist?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  thing?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  thigh?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   arm?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   activityLevel?: Prisma.NullableEnumActivityLevelFieldUpdateOperationsInput | $Enums.ActivityLevel | null
   nutritionGoal?: Prisma.NullableEnumNutritionGoalFieldUpdateOperationsInput | $Enums.NutritionGoal | null
@@ -676,7 +676,7 @@ export type BodyMeasurementsUncheckedUpdateWithoutUserInput = {
   weightGoal?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   chest?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   waist?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  thing?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  thigh?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   arm?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   activityLevel?: Prisma.NullableEnumActivityLevelFieldUpdateOperationsInput | $Enums.ActivityLevel | null
   nutritionGoal?: Prisma.NullableEnumNutritionGoalFieldUpdateOperationsInput | $Enums.NutritionGoal | null
@@ -693,7 +693,7 @@ export type BodyMeasurementsSelect<ExtArgs extends runtime.Types.Extensions.Inte
   weightGoal?: boolean
   chest?: boolean
   waist?: boolean
-  thing?: boolean
+  thigh?: boolean
   arm?: boolean
   activityLevel?: boolean
   nutritionGoal?: boolean
@@ -710,7 +710,7 @@ export type BodyMeasurementsSelectCreateManyAndReturn<ExtArgs extends runtime.Ty
   weightGoal?: boolean
   chest?: boolean
   waist?: boolean
-  thing?: boolean
+  thigh?: boolean
   arm?: boolean
   activityLevel?: boolean
   nutritionGoal?: boolean
@@ -727,7 +727,7 @@ export type BodyMeasurementsSelectUpdateManyAndReturn<ExtArgs extends runtime.Ty
   weightGoal?: boolean
   chest?: boolean
   waist?: boolean
-  thing?: boolean
+  thigh?: boolean
   arm?: boolean
   activityLevel?: boolean
   nutritionGoal?: boolean
@@ -744,7 +744,7 @@ export type BodyMeasurementsSelectScalar = {
   weightGoal?: boolean
   chest?: boolean
   waist?: boolean
-  thing?: boolean
+  thigh?: boolean
   arm?: boolean
   activityLevel?: boolean
   nutritionGoal?: boolean
@@ -753,7 +753,7 @@ export type BodyMeasurementsSelectScalar = {
   updatedAt?: boolean
 }
 
-export type BodyMeasurementsOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "height" | "weight" | "weightGoal" | "chest" | "waist" | "thing" | "arm" | "activityLevel" | "nutritionGoal" | "userId" | "createdAt" | "updatedAt", ExtArgs["result"]["bodyMeasurements"]>
+export type BodyMeasurementsOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "height" | "weight" | "weightGoal" | "chest" | "waist" | "thigh" | "arm" | "activityLevel" | "nutritionGoal" | "userId" | "createdAt" | "updatedAt", ExtArgs["result"]["bodyMeasurements"]>
 export type BodyMeasurementsInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
@@ -776,7 +776,7 @@ export type $BodyMeasurementsPayload<ExtArgs extends runtime.Types.Extensions.In
     weightGoal: number | null
     chest: number | null
     waist: number | null
-    thing: number | null
+    thigh: number | null
     arm: number | null
     activityLevel: $Enums.ActivityLevel | null
     nutritionGoal: $Enums.NutritionGoal | null
@@ -1213,7 +1213,7 @@ export interface BodyMeasurementsFieldRefs {
   readonly weightGoal: Prisma.FieldRef<"BodyMeasurements", 'Int'>
   readonly chest: Prisma.FieldRef<"BodyMeasurements", 'Int'>
   readonly waist: Prisma.FieldRef<"BodyMeasurements", 'Int'>
-  readonly thing: Prisma.FieldRef<"BodyMeasurements", 'Int'>
+  readonly thigh: Prisma.FieldRef<"BodyMeasurements", 'Int'>
   readonly arm: Prisma.FieldRef<"BodyMeasurements", 'Int'>
   readonly activityLevel: Prisma.FieldRef<"BodyMeasurements", 'ActivityLevel'>
   readonly nutritionGoal: Prisma.FieldRef<"BodyMeasurements", 'NutritionGoal'>

@@ -6,6 +6,12 @@ export interface IAuthTokenData {
   role: Role;
 }
 
+export type TCurrentUser = Omit<UserModel, 'password'>;
+
+export interface IRequestWithUser {
+  user?: TCurrentUser;
+}
+
 /* TODO: Codegen generate Models for graphql from Prisma to graphql*/
 
 registerEnumType(Role, { name: 'Role' });

@@ -199,7 +199,7 @@ export const BodyMeasurementsScalarFieldEnum = {
   weightGoal: 'weightGoal',
   chest: 'chest',
   waist: 'waist',
-  thing: 'thing',
+  thigh: 'thigh',
   arm: 'arm',
   activityLevel: 'activityLevel',
   nutritionGoal: 'nutritionGoal',
