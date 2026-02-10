@@ -4,7 +4,7 @@ install:
 start:
 	bun run start
 
-dev:
+start-dev:
 	bun run start:dev
 
 prod:
