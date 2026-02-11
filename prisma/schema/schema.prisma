@@ -10,6 +10,19 @@ generator client {
   moduleFormat = "cjs"
 }
 
+generator nestgraphql {
+  provider                              = "node node_modules/prisma-nestjs-graphql"
+  output                                = "../generated/graphql"
+  moduleFormat                          = "cjs"
+  prismaClientImport                    = "prisma/generated/prisma/client"
+  reExport                              = Directories
+  omitModelCount                        = true
+  noAtomicOperations                    = true
+  requireSingleFieldsInWhereUniqueInput = true
+  combineScalarFilters                  = true
+  purgeOutput                           = true
+}
+
 datasource db {
   provider = "postgresql"
 }

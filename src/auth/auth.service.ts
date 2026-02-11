@@ -8,7 +8,7 @@ import { JwtService } from '@nestjs/jwt';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { AuthInput } from './auth.input';
 import { hash, verify } from 'argon2';
-import { IAuthTokenData } from './auth.interface';
+import { TAuthTokenData } from './auth.interface';
 import { UsersService } from 'src/users/users.service';
 import { Response } from 'express';
 import { isDevMode } from 'src/utils/is-dev.util';
@@ -59,7 +59,7 @@ export class AuthService {
 
   async getNewTokens(refreshToken: string) {
     const result =
-      await this.jwtService.verifyAsync<Pick<IAuthTokenData, 'id'>>(
+      await this.jwtService.verifyAsync<Pick<TAuthTokenData, 'id'>>(
         refreshToken,
       );
     if (!result) {
@@ -94,7 +94,7 @@ export class AuthService {
     return user;
   }
 
-  private generateTokens(data: IAuthTokenData) {
+  private generateTokens(data: TAuthTokenData) {
     const accessToken = this.jwtService.sign(data, {
       expiresIn: '1h',
     });

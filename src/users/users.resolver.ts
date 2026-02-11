@@ -1,23 +1,33 @@
-import { Query, Resolver } from '@nestjs/graphql';
+import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { UsersService } from './users.service';
-import { UserProfileModel } from './models/user-profile.model';
 import { CurrentUser } from 'src/auth/decorators/current-user.decorator';
 import { Auth } from 'src/auth/decorators/auth.decorator';
 import { Role } from 'prisma/generated/prisma/enums';
+import { User } from 'prisma/generated/graphql/user';
+import { UserUpdateInput } from './inputs/user-update.input';
 
 @Resolver()
 export class UsersResolver {
   constructor(private readonly usersService: UsersService) {}
 
-  @Query(() => UserProfileModel, { name: 'profile' })
+  @Query(() => User, { name: 'profile' })
   @Auth()
   getProfile(@CurrentUser('id') id: string) {
     return this.usersService.findById(id);
   }
 
-  @Query(() => UserProfileModel, { name: 'users' })
+  @Mutation(() => User)
+  @Auth()
+  updateProfile(
+    @CurrentUser('id') id: string,
+    @Args('data') input: UserUpdateInput,
+  ) {
+    return this.usersService.updateProfile(id, input);
+  }
+
+  @Query(() => [User], { name: 'users' })
   @Auth(Role.ADMIN)
-  getUsers() {
+  async getUsers() {
     return this.usersService.findAll();
   }
 }

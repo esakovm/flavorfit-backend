@@ -2,9 +2,9 @@ model RecipeIngredient {
   id String @id @default(cuid())
 
   name     String
-  iconUrl  String  @map("icon_url")
+  iconUrl  String @map("icon_url")
   content  String
-  quantity Decimal
+  quantity Float
   unit     Unit
 
   recipe   Recipe @relation(fields: [recipeId], references: [id])

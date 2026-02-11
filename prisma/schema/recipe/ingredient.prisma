@@ -3,7 +3,7 @@ model Ingredient {
 
   name  String
   unit  Unit
-  price Decimal
+  price String
 
   recipes RecipeIngredient[]
 
