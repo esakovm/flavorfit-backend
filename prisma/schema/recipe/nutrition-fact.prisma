@@ -1,0 +1,14 @@
+model NutritionFact {
+  id String @id @default(cuid())
+
+  proteins      Decimal
+  fats          Decimal
+  carbohydrates Decimal
+  fiber         Decimal
+
+  recipe   Recipe @relation(fields: [recipeId], references: [id])
+  recipeId String @unique @map("recipe_id")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt() @map("updated_at")
+}

@@ -1,6 +1,7 @@
 model Recipe {
   id String @id @default(cuid())
 
+  slug        String     @unique
   title       String
   description String
   calories    Int
@@ -10,13 +11,15 @@ model Recipe {
   user   User   @relation(fields: [userId], references: [id])
   userId String @map("user_id")
 
-  recipeIngredients RecipeIngredient[]
-  steps             RecipeStep[]
+  nutritionFact NutritionFact?
+
+  tags        RecipeTags[]
+  steps       RecipeStep[]
+  orderItems  OrderItem[]
+  ingredients RecipeIngredient[]
 
   comments Comment[]
   likes    Like[]
-
-  orderItems OrderItem[]
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")

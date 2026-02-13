@@ -1,0 +1,15 @@
+model RecipeStep {
+  id String @id @default(cuid())
+
+  order       Int
+  title       String
+  description String
+
+  recipe   Recipe @relation(fields: [recipeId], references: [id])
+  recipeId String @map("recipe_id")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("recipe_steps")
+}

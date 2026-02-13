@@ -1,11 +1,12 @@
-model RecipeStep {
+model RecipeTags {
   id String @id @default(cuid())
 
-  recipe   Recipe @relation(fields: [recipeId], references: [id])
-  recipeId String @map("recipe_id")
+  name String @unique
+
+  recipes Recipe[]
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
-  @@map("recipe_steps")
+  @@map("recipe_tags")
 }
