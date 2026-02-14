@@ -1,7 +1,7 @@
 model Like {
   id String @id @default(cuid())
 
-  count Int
+  count Int @default(0)
 
   user   User   @relation(fields: [userId], references: [id])
   userId String @map("user_id")

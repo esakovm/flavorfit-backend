@@ -23,15 +23,15 @@ export * from './enums.js';
  */
 export type Courier = Prisma.CourierModel
 /**
- * Model Order
- * 
- */
-export type Order = Prisma.OrderModel
-/**
  * Model OrderItem
  * 
  */
 export type OrderItem = Prisma.OrderItemModel
+/**
+ * Model Order
+ * 
+ */
+export type Order = Prisma.OrderModel
 /**
  * Model Comment
  * 
@@ -48,10 +48,10 @@ export type Like = Prisma.LikeModel
  */
 export type Ingredient = Prisma.IngredientModel
 /**
- * Model Recipe
+ * Model NutritionFact
  * 
  */
-export type Recipe = Prisma.RecipeModel
+export type NutritionFact = Prisma.NutritionFactModel
 /**
  * Model RecipeIngredient
  * 
@@ -62,6 +62,16 @@ export type RecipeIngredient = Prisma.RecipeIngredientModel
  * 
  */
 export type RecipeStep = Prisma.RecipeStepModel
+/**
+ * Model RecipeTags
+ * 
+ */
+export type RecipeTags = Prisma.RecipeTagsModel
+/**
+ * Model Recipe
+ * 
+ */
+export type Recipe = Prisma.RecipeModel
 /**
  * Model BodyMeasurements
  * 

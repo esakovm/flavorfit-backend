@@ -1,5 +1,4 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { Unit } from 'prisma/generated/prisma/enums';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { RecipeInput } from './inputs/recipe.input';
 
@@ -37,7 +36,7 @@ export class RecipesAdminService {
   }
 
   create(userId: string, data: RecipeInput) {
-    const { steps, nutritionFact, ingredientsIds, tags, ...rest } = data;
+    const { steps, nutritionFact, ingredients, tags, ...rest } = data;
 
     return this.prisma.recipe.create({
       data: {
@@ -50,13 +49,13 @@ export class RecipesAdminService {
         nutritionFact: {
           create: nutritionFact,
         },
-        ...(!!ingredientsIds?.length && {
+        ...(!!ingredients?.length && {
           ingredients: {
-            create: ingredientsIds.map((ingredientId, index) => ({
-              ingredientId,
-              quantity: 1,
+            create: ingredients.map((ingredient, index) => ({
+              ingredientId: ingredient.ingredientId,
+              quantity: ingredient.quantity,
+              unit: ingredient.unit,
               order: index + 1,
-              unit: Unit.GRAM,
             })),
           },
         }),
@@ -76,7 +75,7 @@ export class RecipesAdminService {
   }
 
   update(id: string, data: RecipeInput) {
-    const { steps, nutritionFact, ingredientsIds, tags, ...rest } = data;
+    const { steps, nutritionFact, ingredients, tags, ...rest } = data;
 
     return this.prisma.recipe.update({
       where: { id },
@@ -95,14 +94,14 @@ export class RecipesAdminService {
             })),
           },
         }),
-        ...(!!ingredientsIds?.length && {
+        ...(!!ingredients?.length && {
           ingredients: {
             deleteMany: {},
-            create: ingredientsIds.map((ingredientId, index) => ({
-              ingredientId,
-              quantity: 1,
+            create: ingredients.map((ingredient, index) => ({
+              ingredientId: ingredient.ingredientId,
+              quantity: ingredient.quantity,
+              unit: ingredient.unit,
               order: index + 1,
-              unit: Unit.GRAM,
             })),
           },
         }),

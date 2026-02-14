@@ -3,6 +3,7 @@ import { Role } from 'prisma/generated/prisma/enums';
 import { Auth } from 'src/auth/decorators/auth.decorator';
 import { CurrentUser } from 'src/auth/decorators/current-user.decorator';
 import { RecipeInput } from './inputs/recipe.input';
+import { RecipesQueryInput } from './inputs/recipes-query.input';
 import { RecipeModel } from './models/recipe.model';
 import { RecipesAdminService } from './recipes-admin.service';
 import { RecipesService } from './recipes.service';
@@ -16,8 +17,8 @@ export class RecipesResolver {
 
   @Query(() => [RecipeModel], { name: 'recipes' })
   @Auth(Role.ADMIN)
-  getAll() {
-    return this.recipesService.getAll();
+  getAll(@Args('input') input: RecipesQueryInput) {
+    return this.recipesService.getAll(input);
   }
 
   @Query(() => RecipeModel, { name: 'recipeById' })

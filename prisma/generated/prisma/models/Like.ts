@@ -282,7 +282,7 @@ export type LikeScalarWhereWithAggregatesInput = {
 
 export type LikeCreateInput = {
   id?: string
-  count: number
+  count?: number
   createdAt?: Date | string
   updatedAt?: Date | string
   user: Prisma.UserCreateNestedOneWithoutLikesInput
@@ -291,7 +291,7 @@ export type LikeCreateInput = {
 
 export type LikeUncheckedCreateInput = {
   id?: string
-  count: number
+  count?: number
   userId: string
   recipeId: string
   createdAt?: Date | string
@@ -318,7 +318,7 @@ export type LikeUncheckedUpdateInput = {
 
 export type LikeCreateManyInput = {
   id?: string
-  count: number
+  count?: number
   userId: string
   recipeId: string
   createdAt?: Date | string
@@ -485,7 +485,7 @@ export type LikeUncheckedUpdateManyWithoutUserNestedInput = {
 
 export type LikeCreateWithoutRecipeInput = {
   id?: string
-  count: number
+  count?: number
   createdAt?: Date | string
   updatedAt?: Date | string
   user: Prisma.UserCreateNestedOneWithoutLikesInput
@@ -493,7 +493,7 @@ export type LikeCreateWithoutRecipeInput = {
 
 export type LikeUncheckedCreateWithoutRecipeInput = {
   id?: string
-  count: number
+  count?: number
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -539,7 +539,7 @@ export type LikeScalarWhereInput = {
 
 export type LikeCreateWithoutUserInput = {
   id?: string
-  count: number
+  count?: number
   createdAt?: Date | string
   updatedAt?: Date | string
   recipe: Prisma.RecipeCreateNestedOneWithoutLikesInput
@@ -547,7 +547,7 @@ export type LikeCreateWithoutUserInput = {
 
 export type LikeUncheckedCreateWithoutUserInput = {
   id?: string
-  count: number
+  count?: number
   recipeId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -581,7 +581,7 @@ export type LikeUpdateManyWithWhereWithoutUserInput = {
 
 export type LikeCreateManyRecipeInput = {
   id?: string
-  count: number
+  count?: number
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -613,7 +613,7 @@ export type LikeUncheckedUpdateManyWithoutRecipeInput = {
 
 export type LikeCreateManyUserInput = {
   id?: string
-  count: number
+  count?: number
   recipeId: string
   createdAt?: Date | string
   updatedAt?: Date | string

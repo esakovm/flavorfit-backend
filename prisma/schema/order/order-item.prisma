@@ -1,14 +1,18 @@
 model OrderItem {
   id String @id @default(cuid())
 
-  recipe   Recipe  @relation(fields: [recipeId], references: [id])
-  recipeId String  @map("recipe_id")
-  price    Decimal
+  ingredient   Ingredient @relation(fields: [ingredientId], references: [id])
+  ingredientId String     @map("ingredient_id")
 
   quantity Decimal? @default(1)
 
+  order   Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId String @map("order_id")
+
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+  recipe    Recipe?  @relation(fields: [recipeId], references: [id])
+  recipeId  String?
 
   @@map("order_items")
 }

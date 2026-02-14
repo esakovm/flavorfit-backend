@@ -568,6 +568,14 @@ export type BodyMeasurementsNullableScalarRelationFilter = {
   isNot?: Prisma.BodyMeasurementsWhereInput | null
 }
 
+export type NullableIntFieldUpdateOperationsInput = {
+  set?: number | null
+  increment?: number
+  decrement?: number
+  multiply?: number
+  divide?: number
+}
+
 export type NullableEnumActivityLevelFieldUpdateOperationsInput = {
   set?: $Enums.ActivityLevel | null
 }

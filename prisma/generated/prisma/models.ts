@@ -9,14 +9,16 @@
  * 🟢 You can import this file directly.
  */
 export type * from './models/Courier.js'
-export type * from './models/Order.js'
 export type * from './models/OrderItem.js'
+export type * from './models/Order.js'
 export type * from './models/Comment.js'
 export type * from './models/Like.js'
 export type * from './models/Ingredient.js'
-export type * from './models/Recipe.js'
+export type * from './models/NutritionFact.js'
 export type * from './models/RecipeIngredient.js'
 export type * from './models/RecipeStep.js'
+export type * from './models/RecipeTags.js'
+export type * from './models/Recipe.js'
 export type * from './models/BodyMeasurements.js'
 export type * from './models/Profile.js'
 export type * from './models/User.js'
