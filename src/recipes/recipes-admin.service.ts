@@ -16,7 +16,7 @@ export class RecipesAdminService {
       where: { id },
       include: {
         steps: true,
-        recipeIngredients: true,
+        ingredients: true,
       },
     });
 

@@ -6,7 +6,12 @@ export class RecipesService {
   constructor(private readonly prisma: PrismaService) {}
 
   getAll() {
-    return this.prisma.recipe.findMany();
+    return this.prisma.recipe.findMany({
+      include: {
+        comments: true,
+        likes: true,
+      },
+    });
   }
 
   async getBySlug(slug: string) {
